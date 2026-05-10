@@ -1,6 +1,8 @@
 # Codex Command Mapping
 
-Claude Code Game Studios exposes workflows as Claude slash commands. Codex does not provide the same slash-command registry, so each slash command is treated as a named workflow.
+Claude Code Game Studios exposes workflows as Claude slash commands. Codex does
+not provide the same slash-command registry, so each slash command is treated as
+a named workflow loaded from `.claude/skills/`.
 
 ## Invocation
 
@@ -19,22 +21,22 @@ bash scripts/codex-run-skill.sh start
 bash scripts/codex-run-skill.sh setup-engine godot 4.5
 ```
 
-The emitted prompt should be pasted into Codex.
+The emitted prompt should be pasted into Codex, or you can ask Codex directly.
 
 ## Routing Rules
 
 When a command is invoked, Codex must:
 
 1. Normalize `/command` to `command`.
-2. Search `.claude/skills/` for a matching skill directory or markdown file.
-3. Read the skill instructions.
+2. Look up the command in `.codex/skill-index.json`.
+3. Read the matching `.claude/skills/<command>/SKILL.md`.
 4. Read `.claude/docs/workflow-catalog.yaml` if the command affects project phase.
 5. Read relevant agents from `.claude/agents/` if the skill delegates work.
-6. Ask before writing artifacts.
+6. Ask before writing artifacts unless the user already explicitly requested the edit.
 
-## Core Commands from README
+## Commands
 
-### Onboarding & Navigation
+### Onboarding And Navigation
 
 - `/start`
 - `/help`
@@ -51,13 +53,13 @@ When a command is invoked, Codex must:
 - `/review-all-gdds`
 - `/propagate-design-change`
 
-### Art & Assets
+### Art And Assets
 
 - `/art-bible`
 - `/asset-spec`
 - `/asset-audit`
 
-### UX & Interface Design
+### UX And Interface Design
 
 - `/ux-design`
 - `/ux-review`
@@ -69,7 +71,7 @@ When a command is invoked, Codex must:
 - `/architecture-review`
 - `/create-control-manifest`
 
-### Stories & Sprints
+### Stories And Sprints
 
 - `/create-epics`
 - `/create-stories`
@@ -80,7 +82,7 @@ When a command is invoked, Codex must:
 - `/story-done`
 - `/estimate`
 
-### Reviews & Analysis
+### Reviews And Analysis
 
 - `/design-review`
 - `/code-review`
@@ -91,8 +93,9 @@ When a command is invoked, Codex must:
 - `/tech-debt`
 - `/gate-check`
 - `/consistency-check`
+- `/security-audit`
 
-### QA & Testing
+### QA And Testing
 
 - `/qa-plan`
 - `/smoke-check`
@@ -121,8 +124,9 @@ When a command is invoked, Codex must:
 - `/changelog`
 - `/patch-notes`
 - `/hotfix`
+- `/day-one-patch`
 
-### Creative & Content
+### Creative And Content
 
 - `/prototype`
 - `/onboard`
@@ -139,6 +143,11 @@ When a command is invoked, Codex must:
 - `/team-level`
 - `/team-live-ops`
 - `/team-qa`
+
+## Machine-Readable Index
+
+`.codex/skill-index.json` contains the same 72 commands with source paths.
+Prefer it when routing automatically.
 
 ## Codex Output Contract
 

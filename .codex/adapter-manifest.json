@@ -1,25 +1,42 @@
 {
   "name": "claude-code-game-studios-codex-adapter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "source_template": "Claude Code Game Studios",
   "source_root": ".claude",
+  "source_counts": {
+    "agents": 49,
+    "skills": 72,
+    "hooks": 12,
+    "rules": 11
+  },
   "codex_entrypoints": [
     "AGENTS.md",
     "CODEX.md",
+    ".codex-plugin/plugin.json",
+    "skills/claude-game-studios/SKILL.md",
     ".codex/adapter-manifest.json",
     ".codex/commands.md",
-    ".codex/hooks.md"
+    ".codex/hooks.md",
+    ".codex/skill-index.json",
+    ".codex/agent-index.json"
   ],
-  "compatibility_goal": "Preserve Claude Code Game Studios workflow semantics for Codex through role emulation, command templates, script wrappers, and explicit collaboration rules.",
+  "compatibility_goal": "Preserve Claude Code Game Studios workflow semantics for Codex through role emulation, command templates, script wrappers, plugin discovery, and explicit collaboration rules.",
   "mappings": {
-    "CLAUDE.md": ["AGENTS.md", "CODEX.md", "CLAUDE.md"],
-    ".claude/agents": ".codex role emulation; read source agent markdown before acting",
-    ".claude/skills": ".codex/commands.md plus scripts/codex-run-skill.sh",
-    ".claude/hooks": ".codex/hooks.md plus scripts/codex-*.sh wrappers",
+    "CLAUDE.md": [
+      "AGENTS.md",
+      "CODEX.md",
+      "CLAUDE.md"
+    ],
+    ".claude/agents": ".codex/agent-index.json plus source role emulation; read source agent markdown before acting",
+    ".claude/skills": ".codex/skill-index.json, .codex/commands.md, skills/claude-game-studios/SKILL.md, scripts/codex-run-skill.ps1, and scripts/codex-run-skill.sh",
+    ".claude/hooks": ".codex/hooks.md plus scripts/codex-*.ps1 and scripts/codex-*.sh wrappers",
     ".claude/rules": "path-scoped rules referenced before edits",
     ".claude/settings.json": "safety policy and hook intent mapping",
     ".claude/docs/workflow-catalog.yaml": "phase and skill routing source of truth",
-    ".claude/docs/templates": "document artifact templates"
+    ".claude/docs/templates": "document artifact templates",
+    ".codex-plugin/plugin.json": "Codex plugin discovery manifest",
+    "skills/claude-game-studios/SKILL.md": "Codex skill entry point for all Game Studios workflows",
+    "docs/CODEX_OPERATION_MANUAL.md": "practical operating manual"
   },
   "unsupported_native_features": [
     "native Claude Code slash command UI",
@@ -31,13 +48,17 @@
     "slash_commands": "Invoke by text: Run /command-name using Codex adapter, or use scripts/codex-run-skill.sh.",
     "subagents": "Invoke by text: Act as agent-name, then read .claude/agents/<agent-name>.md if present.",
     "hooks": "Run scripts manually, via Git hooks, or CI.",
-    "permissions": "Follow deny/allow policy documented in AGENTS.md. Ask before destructive actions."
+    "permissions": "Follow deny/allow policy documented in AGENTS.md. Ask before destructive actions.",
+    "plugin_discovery": "Use .codex-plugin/plugin.json and skills/claude-game-studios/SKILL.md."
   },
   "session_boot_sequence": [
     "Read AGENTS.md",
     "Read CODEX.md",
     "Read CLAUDE.md",
     "Read .codex/adapter-manifest.json",
+    "Read skills/claude-game-studios/SKILL.md when installed as a Codex plugin",
+    "Read .codex/skill-index.json when routing slash-command workflows",
+    "Read .codex/agent-index.json when routing studio roles",
     "Read .claude/docs/workflow-catalog.yaml when workflow phase matters",
     "Read matching agent/skill/rule files before acting"
   ],
@@ -45,5 +66,15 @@
     "default": "ask-before-write",
     "commit": "only when explicitly requested",
     "dangerous_commands": "deny unless explicitly requested and explained"
+  },
+  "validation": {
+    "session_check": "powershell -ExecutionPolicy Bypass -File scripts/codex-session-check.ps1",
+    "commit_check": "powershell -ExecutionPolicy Bypass -File scripts/codex-validate-commit.ps1",
+    "asset_check": "powershell -ExecutionPolicy Bypass -File scripts/codex-validate-assets.ps1 <path>",
+    "bash_equivalents": [
+      "bash scripts/codex-session-check.sh",
+      "bash scripts/codex-validate-commit.sh",
+      "bash scripts/codex-validate-assets.sh <path>"
+    ]
   }
 }

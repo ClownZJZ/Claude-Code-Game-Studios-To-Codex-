@@ -1,0 +1,46 @@
+{
+  "name": "claude-code-game-studios-codex",
+  "version": "0.2.0",
+  "description": "Codex adapter for Claude Code Game Studios: studio roles, game-development workflows, hook equivalents, and path-scoped rules.",
+  "author": {
+    "name": "Donchitos and Codex adapter contributors",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios"
+  },
+  "homepage": "https://github.com/ClownZJZ/Claude-Code-Game-Studios-To-Codex-/tree/codex/full-adapter",
+  "repository": "https://github.com/ClownZJZ/Claude-Code-Game-Studios-To-Codex-",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "game-development",
+    "game-studio",
+    "agents",
+    "godot",
+    "unity",
+    "unreal",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Claude Game Studios",
+    "shortDescription": "Use Claude Code Game Studios workflows in Codex",
+    "longDescription": "A Codex-compatible adapter for the full Claude Code Game Studios template. It keeps the original .claude agents, skills, hooks, rules, and templates as source material, then exposes a Codex plugin skill, AGENTS.md guidance, command mapping, and validation scripts so Codex can operate the same studio workflow honestly and safely.",
+    "developerName": "ClownZJZ",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ClownZJZ/Claude-Code-Game-Studios-To-Codex-",
+    "privacyPolicyURL": "https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Run /start using the Codex adapter",
+      "Act as godot-specialist and review this project",
+      "Create a sprint plan with Game Studios"
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/game-studios.svg",
+    "logo": "./assets/game-studios.svg",
+    "screenshots": []
+  }
+}

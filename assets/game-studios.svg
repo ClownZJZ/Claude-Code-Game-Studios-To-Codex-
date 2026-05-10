@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Claude Game Studios Codex Adapter</title>
+  <desc id="desc">A teal badge with a game controller and four studio nodes.</desc>
+  <rect width="256" height="256" rx="48" fill="#0F766E"/>
+  <rect x="34" y="42" width="188" height="172" rx="28" fill="#F8FAFC"/>
+  <path d="M76 154c-14 0-25-11-25-25s11-25 25-25h104c14 0 25 11 25 25s-11 25-25 25c-11 0-18-7-25-14H101c-7 7-14 14-25 14Z" fill="#0F172A"/>
+  <path d="M82 119v20M72 129h20" stroke="#F8FAFC" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="166" cy="124" r="6" fill="#F8FAFC"/>
+  <circle cx="181" cy="137" r="6" fill="#F8FAFC"/>
+  <circle cx="83" cy="74" r="11" fill="#14B8A6"/>
+  <circle cx="128" cy="74" r="11" fill="#F59E0B"/>
+  <circle cx="173" cy="74" r="11" fill="#2563EB"/>
+  <path d="M83 85v15M128 85v15M173 85v15" stroke="#94A3B8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M93 190h70M177 190h8" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+</svg>

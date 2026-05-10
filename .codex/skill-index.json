@@ -1,0 +1,367 @@
+{
+  "schema_version": 1,
+  "source_root": ".claude/skills",
+  "count": 72,
+  "commands": [
+    {
+      "name": "adopt",
+      "category": "onboarding",
+      "source": ".claude/skills/adopt/SKILL.md"
+    },
+    {
+      "name": "architecture-decision",
+      "category": "architecture",
+      "source": ".claude/skills/architecture-decision/SKILL.md"
+    },
+    {
+      "name": "architecture-review",
+      "category": "architecture",
+      "source": ".claude/skills/architecture-review/SKILL.md"
+    },
+    {
+      "name": "art-bible",
+      "category": "art-assets",
+      "source": ".claude/skills/art-bible/SKILL.md"
+    },
+    {
+      "name": "asset-audit",
+      "category": "art-assets",
+      "source": ".claude/skills/asset-audit/SKILL.md"
+    },
+    {
+      "name": "asset-spec",
+      "category": "art-assets",
+      "source": ".claude/skills/asset-spec/SKILL.md"
+    },
+    {
+      "name": "balance-check",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/balance-check/SKILL.md"
+    },
+    {
+      "name": "brainstorm",
+      "category": "game-design",
+      "source": ".claude/skills/brainstorm/SKILL.md"
+    },
+    {
+      "name": "bug-report",
+      "category": "production",
+      "source": ".claude/skills/bug-report/SKILL.md"
+    },
+    {
+      "name": "bug-triage",
+      "category": "production",
+      "source": ".claude/skills/bug-triage/SKILL.md"
+    },
+    {
+      "name": "changelog",
+      "category": "release",
+      "source": ".claude/skills/changelog/SKILL.md"
+    },
+    {
+      "name": "code-review",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/code-review/SKILL.md"
+    },
+    {
+      "name": "consistency-check",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/consistency-check/SKILL.md"
+    },
+    {
+      "name": "content-audit",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/content-audit/SKILL.md"
+    },
+    {
+      "name": "create-architecture",
+      "category": "architecture",
+      "source": ".claude/skills/create-architecture/SKILL.md"
+    },
+    {
+      "name": "create-control-manifest",
+      "category": "architecture",
+      "source": ".claude/skills/create-control-manifest/SKILL.md"
+    },
+    {
+      "name": "create-epics",
+      "category": "stories-sprints",
+      "source": ".claude/skills/create-epics/SKILL.md"
+    },
+    {
+      "name": "create-stories",
+      "category": "stories-sprints",
+      "source": ".claude/skills/create-stories/SKILL.md"
+    },
+    {
+      "name": "day-one-patch",
+      "category": "release",
+      "source": ".claude/skills/day-one-patch/SKILL.md"
+    },
+    {
+      "name": "design-review",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/design-review/SKILL.md"
+    },
+    {
+      "name": "design-system",
+      "category": "game-design",
+      "source": ".claude/skills/design-system/SKILL.md"
+    },
+    {
+      "name": "dev-story",
+      "category": "stories-sprints",
+      "source": ".claude/skills/dev-story/SKILL.md"
+    },
+    {
+      "name": "estimate",
+      "category": "stories-sprints",
+      "source": ".claude/skills/estimate/SKILL.md"
+    },
+    {
+      "name": "gate-check",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/gate-check/SKILL.md"
+    },
+    {
+      "name": "help",
+      "category": "onboarding",
+      "source": ".claude/skills/help/SKILL.md"
+    },
+    {
+      "name": "hotfix",
+      "category": "release",
+      "source": ".claude/skills/hotfix/SKILL.md"
+    },
+    {
+      "name": "launch-checklist",
+      "category": "release",
+      "source": ".claude/skills/launch-checklist/SKILL.md"
+    },
+    {
+      "name": "localize",
+      "category": "creative-content",
+      "source": ".claude/skills/localize/SKILL.md"
+    },
+    {
+      "name": "map-systems",
+      "category": "game-design",
+      "source": ".claude/skills/map-systems/SKILL.md"
+    },
+    {
+      "name": "milestone-review",
+      "category": "production",
+      "source": ".claude/skills/milestone-review/SKILL.md"
+    },
+    {
+      "name": "onboard",
+      "category": "creative-content",
+      "source": ".claude/skills/onboard/SKILL.md"
+    },
+    {
+      "name": "patch-notes",
+      "category": "release",
+      "source": ".claude/skills/patch-notes/SKILL.md"
+    },
+    {
+      "name": "perf-profile",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/perf-profile/SKILL.md"
+    },
+    {
+      "name": "playtest-report",
+      "category": "production",
+      "source": ".claude/skills/playtest-report/SKILL.md"
+    },
+    {
+      "name": "project-stage-detect",
+      "category": "onboarding",
+      "source": ".claude/skills/project-stage-detect/SKILL.md"
+    },
+    {
+      "name": "propagate-design-change",
+      "category": "game-design",
+      "source": ".claude/skills/propagate-design-change/SKILL.md"
+    },
+    {
+      "name": "prototype",
+      "category": "creative-content",
+      "source": ".claude/skills/prototype/SKILL.md"
+    },
+    {
+      "name": "qa-plan",
+      "category": "qa-testing",
+      "source": ".claude/skills/qa-plan/SKILL.md"
+    },
+    {
+      "name": "quick-design",
+      "category": "game-design",
+      "source": ".claude/skills/quick-design/SKILL.md"
+    },
+    {
+      "name": "regression-suite",
+      "category": "qa-testing",
+      "source": ".claude/skills/regression-suite/SKILL.md"
+    },
+    {
+      "name": "release-checklist",
+      "category": "release",
+      "source": ".claude/skills/release-checklist/SKILL.md"
+    },
+    {
+      "name": "retrospective",
+      "category": "production",
+      "source": ".claude/skills/retrospective/SKILL.md"
+    },
+    {
+      "name": "reverse-document",
+      "category": "production",
+      "source": ".claude/skills/reverse-document/SKILL.md"
+    },
+    {
+      "name": "review-all-gdds",
+      "category": "game-design",
+      "source": ".claude/skills/review-all-gdds/SKILL.md"
+    },
+    {
+      "name": "scope-check",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/scope-check/SKILL.md"
+    },
+    {
+      "name": "security-audit",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/security-audit/SKILL.md"
+    },
+    {
+      "name": "setup-engine",
+      "category": "onboarding",
+      "source": ".claude/skills/setup-engine/SKILL.md"
+    },
+    {
+      "name": "skill-improve",
+      "category": "qa-testing",
+      "source": ".claude/skills/skill-improve/SKILL.md"
+    },
+    {
+      "name": "skill-test",
+      "category": "qa-testing",
+      "source": ".claude/skills/skill-test/SKILL.md"
+    },
+    {
+      "name": "smoke-check",
+      "category": "qa-testing",
+      "source": ".claude/skills/smoke-check/SKILL.md"
+    },
+    {
+      "name": "soak-test",
+      "category": "qa-testing",
+      "source": ".claude/skills/soak-test/SKILL.md"
+    },
+    {
+      "name": "sprint-plan",
+      "category": "stories-sprints",
+      "source": ".claude/skills/sprint-plan/SKILL.md"
+    },
+    {
+      "name": "sprint-status",
+      "category": "stories-sprints",
+      "source": ".claude/skills/sprint-status/SKILL.md"
+    },
+    {
+      "name": "start",
+      "category": "onboarding",
+      "source": ".claude/skills/start/SKILL.md"
+    },
+    {
+      "name": "story-done",
+      "category": "stories-sprints",
+      "source": ".claude/skills/story-done/SKILL.md"
+    },
+    {
+      "name": "story-readiness",
+      "category": "stories-sprints",
+      "source": ".claude/skills/story-readiness/SKILL.md"
+    },
+    {
+      "name": "team-audio",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-audio/SKILL.md"
+    },
+    {
+      "name": "team-combat",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-combat/SKILL.md"
+    },
+    {
+      "name": "team-level",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-level/SKILL.md"
+    },
+    {
+      "name": "team-live-ops",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-live-ops/SKILL.md"
+    },
+    {
+      "name": "team-narrative",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-narrative/SKILL.md"
+    },
+    {
+      "name": "team-polish",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-polish/SKILL.md"
+    },
+    {
+      "name": "team-qa",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-qa/SKILL.md"
+    },
+    {
+      "name": "team-release",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-release/SKILL.md"
+    },
+    {
+      "name": "team-ui",
+      "category": "team-orchestration",
+      "source": ".claude/skills/team-ui/SKILL.md"
+    },
+    {
+      "name": "tech-debt",
+      "category": "reviews-analysis",
+      "source": ".claude/skills/tech-debt/SKILL.md"
+    },
+    {
+      "name": "test-evidence-review",
+      "category": "qa-testing",
+      "source": ".claude/skills/test-evidence-review/SKILL.md"
+    },
+    {
+      "name": "test-flakiness",
+      "category": "qa-testing",
+      "source": ".claude/skills/test-flakiness/SKILL.md"
+    },
+    {
+      "name": "test-helpers",
+      "category": "qa-testing",
+      "source": ".claude/skills/test-helpers/SKILL.md"
+    },
+    {
+      "name": "test-setup",
+      "category": "qa-testing",
+      "source": ".claude/skills/test-setup/SKILL.md"
+    },
+    {
+      "name": "ux-design",
+      "category": "ux-interface",
+      "source": ".claude/skills/ux-design/SKILL.md"
+    },
+    {
+      "name": "ux-review",
+      "category": "ux-interface",
+      "source": ".claude/skills/ux-review/SKILL.md"
+    }
+  ]
+}

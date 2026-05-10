@@ -9,7 +9,14 @@ Claude source:
 - `.claude/hooks/session-start.sh`
 - `.claude/hooks/detect-gaps.sh`
 
-Codex equivalent:
+Codex equivalent on Windows / PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/codex-start.ps1
+powershell -ExecutionPolicy Bypass -File scripts/codex-session-check.ps1
+```
+
+Codex equivalent on macOS/Linux or Git Bash:
 
 ```bash
 bash scripts/codex-start.sh
@@ -29,7 +36,13 @@ Claude source:
 - `.claude/hooks/validate-commit.sh`
 - `.claude/hooks/validate-push.sh`
 
-Codex equivalent before commit/push:
+Codex equivalent before commit/push on Windows / PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/codex-validate-commit.ps1
+```
+
+Codex equivalent before commit/push on macOS/Linux or Git Bash:
 
 ```bash
 bash scripts/codex-validate-commit.sh
@@ -48,7 +61,13 @@ Claude source:
 - `.claude/hooks/validate-assets.sh`
 - `.claude/hooks/validate-skill-change.sh`
 
-Codex equivalent:
+Codex equivalent on Windows / PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/codex-validate-assets.ps1 <path>
+```
+
+Codex equivalent on macOS/Linux or Git Bash:
 
 ```bash
 bash scripts/codex-validate-assets.sh <path>
