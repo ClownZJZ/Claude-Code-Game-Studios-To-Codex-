@@ -1,0 +1,49 @@
+{
+  "name": "claude-code-game-studios-codex-adapter",
+  "version": "0.1.0",
+  "source_template": "Claude Code Game Studios",
+  "source_root": ".claude",
+  "codex_entrypoints": [
+    "AGENTS.md",
+    "CODEX.md",
+    ".codex/adapter-manifest.json",
+    ".codex/commands.md",
+    ".codex/hooks.md"
+  ],
+  "compatibility_goal": "Preserve Claude Code Game Studios workflow semantics for Codex through role emulation, command templates, script wrappers, and explicit collaboration rules.",
+  "mappings": {
+    "CLAUDE.md": ["AGENTS.md", "CODEX.md", "CLAUDE.md"],
+    ".claude/agents": ".codex role emulation; read source agent markdown before acting",
+    ".claude/skills": ".codex/commands.md plus scripts/codex-run-skill.sh",
+    ".claude/hooks": ".codex/hooks.md plus scripts/codex-*.sh wrappers",
+    ".claude/rules": "path-scoped rules referenced before edits",
+    ".claude/settings.json": "safety policy and hook intent mapping",
+    ".claude/docs/workflow-catalog.yaml": "phase and skill routing source of truth",
+    ".claude/docs/templates": "document artifact templates"
+  },
+  "unsupported_native_features": [
+    "native Claude Code slash command UI",
+    "native Claude Code subagent spawning",
+    "native Claude Code statusLine execution",
+    "native Claude Code SessionStart/PreToolUse/PostToolUse/SubagentStart/SubagentStop events"
+  ],
+  "codex_equivalents": {
+    "slash_commands": "Invoke by text: Run /command-name using Codex adapter, or use scripts/codex-run-skill.sh.",
+    "subagents": "Invoke by text: Act as agent-name, then read .claude/agents/<agent-name>.md if present.",
+    "hooks": "Run scripts manually, via Git hooks, or CI.",
+    "permissions": "Follow deny/allow policy documented in AGENTS.md. Ask before destructive actions."
+  },
+  "session_boot_sequence": [
+    "Read AGENTS.md",
+    "Read CODEX.md",
+    "Read CLAUDE.md",
+    "Read .codex/adapter-manifest.json",
+    "Read .claude/docs/workflow-catalog.yaml when workflow phase matters",
+    "Read matching agent/skill/rule files before acting"
+  ],
+  "write_policy": {
+    "default": "ask-before-write",
+    "commit": "only when explicitly requested",
+    "dangerous_commands": "deny unless explicitly requested and explained"
+  }
+}
